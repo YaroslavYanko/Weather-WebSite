@@ -78,7 +78,7 @@ class CityMyWeaher {
       if (!res.ok) throw new Error(`${(data, message)} ${res.status}`);
 
       const data = await res.json();
-
+     console.log(data)
       state.dataWeather = {
         name: data.name,
         country: data.sys.country,
@@ -228,7 +228,7 @@ class Views extends SearchCity {
         <li><p>Humidity: ${this.dataWeather.humidity}</p></li>
       </ul>
 
-      <button class="btn__delete"><span>Видалити</span></button>
+      <button class="btn__delete"><span>Remove</span></button>
     </div>
       `;
   }
